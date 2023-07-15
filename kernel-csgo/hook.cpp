@@ -5,7 +5,7 @@ bool hook::call_kernel_function(void* kernel_function_address)
     if (!kernel_function_address)
         return false;
 
-    void** hook_function = reinterpret_cast<PVOID*>(memory::get_system_module_export("\\SystemRoot\\System32\\drivers\\dxgkrnl.sys", "NtQueryCompositionSurfaceStatistics")); // NtQueryCompositionSurfaceStatistics
+    void** hook_function = reinterpret_cast<PVOID*>(memory::get_system_module_export("\\SystemRoot\\System32\\drivers\\dxgkrnl.sys", "NtFlipObjectReadNextMessageToProducer")); // (alternative: NtQueryCompositionSurfaceStatistics)
 
     if (!hook_function)
         return false;

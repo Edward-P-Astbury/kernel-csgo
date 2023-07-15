@@ -131,13 +131,16 @@
     <ClInclude Include="cheat.h" />
     <ClInclude Include="definitions.h" />
     <ClInclude Include="driver_controller.h" />
+    <ClInclude Include="easywsclient.hpp" />
     <ClInclude Include="hook.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="memory.h" />
     <ClInclude Include="offsets.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cheat.cpp" />
     <ClCompile Include="driver_controller.cpp" />
+    <ClCompile Include="easywsclient.cpp" />
     <ClCompile Include="hook.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="memory.cpp" />

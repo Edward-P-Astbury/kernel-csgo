@@ -110,7 +110,7 @@ NTSTATUS memory::write_memory(PEPROCESS target_process, void* source, void* targ
     NTSTATUS status = MmCopyVirtualMemory(IoGetCurrentProcess(), source, target_process, target, size, KernelMode, &bytes);
     if (!NT_SUCCESS(status) || !bytes)
     {
-        DbgPrintEx(0, 0, "Process lookup failed (write)");
+        DbgPrintEx(0, 0, "Process lookup failed (write)\n");
         return STATUS_INVALID_ADDRESS;
     }
     return status;
@@ -125,7 +125,7 @@ NTSTATUS memory::read_memory(PEPROCESS target_process, void* source, void* targe
     NTSTATUS status = MmCopyVirtualMemory(target_process, source, IoGetCurrentProcess(), target, size, KernelMode, &bytes);
     if (!NT_SUCCESS(status) || !bytes)
     {
-        DbgPrintEx(0, 0, "Process lookup failed (read)");
+        DbgPrintEx(0, 0, "Process lookup failed (read)\n");
         return STATUS_INVALID_ADDRESS;
     }
     return status;

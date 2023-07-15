@@ -19,5 +19,5 @@ ULONG driver_controller::get_engine_base(ULONG process_id)
 
     hook::call_hook(&info);
 
-    return info.client_base;
+    return info.engine_base;
 }

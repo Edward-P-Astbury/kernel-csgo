@@ -7,7 +7,7 @@ int main()
 	LoadLibraryA("win32u.dll");
 	if (GetModuleHandleA("win32u.dll"))
 	{
-		printf("[user - mode - csgo]: Modules loaded");
+		printf("[user - mode - csgo]: Modules loaded\n");
 		cheat::run();
 	}
 	else
