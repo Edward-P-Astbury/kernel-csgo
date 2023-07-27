@@ -44,7 +44,7 @@ void cheat::run()
 				ULONG client_state = driver_controller::read_memory<ULONG>(process_id, engine_base + dwClientState);
 
 				int n = 0;
-				char c = 'o'; // TODO: was 'c'
+				char c = 'o';
 				char map_name_buffer[32];
 
 				while (c != '\0')
@@ -94,7 +94,7 @@ void cheat::run()
 						n++;
 					}
 
-					INT simulation_time = driver_controller::read_memory<INT>(process_id, base_entity + m_flSimulationTime);
+					int simulation_time = driver_controller::read_memory<int>(process_id, base_entity + m_flSimulationTime);
 
 					data["x_positions"].push_back(entity_origin_x);
 					data["y_positions"].push_back(entity_origin_y);
